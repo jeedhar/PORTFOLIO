@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="../css/example.css">
+    <script src="https://kit.fontawesome.com/9b986d495e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav >
+                <img src="../image/j21.png" class="logo" >
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full stack developer</p>
+                <h1>Hi,I'm <span>Jeeva</span><br>I'm From Tamilnadu</h1>
+            </div>
+        </div>
+    </div>
+    <!-----------------about----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../image/j22.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Im jeeva,</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" >skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full Stack developer</span><br>Developing an webpage </li>
+                            <li><span>frontend</span><br>html,css and js </li>
+                            <li><span>backend</span><br>mongodb </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-2023</span><br>hospital management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2013-2015</span><br>Government higher secondary school</li>
+                            <li><span>2015-2017</span><br>Government higher secondary school</li>
+                            <li><span>2017-2021</span><br>velalar collage of engineering and technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------service----------------->
+<div id="services">
+    <div class="container"></div>
+    <h1 class="sub-title">My services</h1>
+    <div class="services-list">
+        <div>
+            <h2>Front end</h2>
+            <p>Creating new features,functionlity and cabapilities on the eCommerce sites using javascript,ajax,react and json.Creating modular responsive template using modern CSS techniques and javascript libraries.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div>
+            <h2>Back end</h2>
+            <p>Entry level backend developers are tasked with designing, developing, and maintaining the underlying networks and systems of complex databases.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div>
+            <h2>Web development</h2>
+            <p>Developed and maintained the company's database, resulting in a 30% increase in property listings.Implemented an automated data validation process that reduced errors by 40%.Worked with the front-end team to build an interactive map feature, resulting in a 20% increase in property views</p>
+            <a href="#">learn more</a>
+        </div>
+    </div>
+    <!------------------contact=----------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i>jeevaarumugam2000@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone"></i>86678 22334</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jeevaarumugam"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <button ><a href="../image/JEEVA.pdf" download class="btn btn2">Download Cv  <i class="fa-solid fa-download"></i></a></button>
+                    
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="your name " required>
+                        <input type="email" name="Email" placeholder="your email id " required>
+                        <textarea name="Message"  rows="10" placeholder="your message"></textarea>
+                        <button  id="btn2" type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright &#169; Portfolio</p>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links")
+        var tabcontents =document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var side = document.getElementById("sidemenu");
+
+        function openmenu(){
+            side.style.right="0";
+        }
+        function closemenu(){
+            side.style.right="-200px";
+        }
+        
+    </script>
+</body>
+</html>
